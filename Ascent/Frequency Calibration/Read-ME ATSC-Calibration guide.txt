@@ -72,3 +72,22 @@ Issues and Observations
 2. When the 6 MHz step in frequency is made, I have made no effort to line up the FFT to only have valid values for the settled down frequency. This causes smearing of the display when it occurs and is noticeable in the waterfall display at the frequency transition region stepping time.
 3. Internal to the flow graph I use a A/D model previously developed instead of doing the program with vectors. Since then I have developed the program without the A/D but found that the A/D version performs better. Why it’s better has to do with streaming memory allocation and my lack of programming skills, sorry. I have chosen to only post the A/D version.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

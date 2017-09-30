@@ -1,0 +1,10 @@
+[main]
+ppm = 19.0
+freq_error_offset = -1.0
+rcv_tun_freq_selected_1 = 500309441.0
+rcv_tun_freq_selected_2 = 506309441.0
+rcv_tun_freq_selected_3 = 548309441.0
+rcv_tun_freq_selected_4 = 560309441.0
+rcv_tun_freq_selected_5 = 638309441.0
+rcv_tun_freq_selected_6 = 644309441.0
+
