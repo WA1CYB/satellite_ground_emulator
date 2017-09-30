@@ -1,0 +1,74 @@
+Read-ME ATSC-Calibration guide
+
+This program (atsc_fcal_a) uses a rtl_sdr dongle by default. 
+ A USRP example version (atsc_fcal_a_USRP) is also included to show how to change the SDR type.
+
+* There are two ways to load this program
+   1. Simply run the atsc_fcal_a.grc program in GNU Radio
+   2. Download the windows only ZIP file, unzip it in a new directory and run the exe file
+
+Using the GRC program
+
+ * Plug in the SDR, Run the flow graph and let the SDR warm up (could take 10 mins)
+ * Restart the program
+ * Change the Mode Switch Selection using the up/down arrows and select Ramp Channels 14->51
+    This has the receiver tunning for all the ATSC channels that might be transmitting
+    Your area may have 1 channel or a dozen channels, depending on where you live.
+    Note that the channel number is a FCC number, not the one that the TV station displays
+    Once at least one channel is spotted you can change the Mode Switch to the Single Frequency Channel Mode 
+ * Set the Mode Switch to the Single Frequency Channel Mode
+ * Set the Manual Rcvr Receiver Frequency to the channel you spotted while in Ramp Mode
+    I set the input filter for a worst case error of +/- 10 KHZ. You may have to set the PPM 1st if your error exceeds this
+ * Set the ppm value so as to best center the center frequency around 0 kHz using bothe the left and right displays
+    In my area a typical channel has a displayed Signal to Noise floor (video) of 40 dB
+ * Select the Waterfall Display Tab on the left display
+ * Set the slider at the bottom of the display to a value slightly greater than the noise floor
+ * Set the slider at the top of the display to a value slightly greater than the peak of the signal
+ * You should see your station appear as a straight line on the waterfall, roughly around 0 KHz
+ * Using your mouse expand the left display to Zoom in the Frequency/time display by holding down the left button
+   Feel free to also adjust the sliders so as do minimize the background noise
+ * Fine tune the ppm value you set previously to get the line as close as possible to 0 kHz
+ * Adjust the RIT Freq. Error Offset ( + or - ) so as to center the line as close as possible to 0 kHz on the right display
+ * Using your mouse, expand the right display to Zoom in the Frequency and use your cursor to identify the error
+    The waterfall should look like a straight line at 0 kHz
+    You can use the displayed ppm and RIT values in your other programs (If you only have 1 station)
+ * You can fine tune your RIT value by selecting the Time Domain Display Tab
+ * The two lines you see are the I/Q offset frequency error. Use the RIT up/down arrows to flatten the line
+    This is where any temperature drift you have will be quite evident!
+ * Switch back to the Waterfall Tab
+ * Set the Manual Receiver Frequency back to the base frequency 470309441 Hz using the arrows
+ * Change the Mode switch to Ramp all Channels
+    You should see a few seconds of any one channel and the display may appear as a broken line
+    You also may want to lower the bottom tab so as to see more of the lower signals
+ * Select up to 6 channels that have good signal to noise to permit a frequency comparison
+    You will probably want to switch back and forth from the Single Frequency Channel Mode to get the best ones
+ * Again, Set the Manual Receiver Frequency back to the base frequency 470309441 Hz using the arrows ( the program steps off this value)
+ * Set your selected frequencies in the 6 Rcvr. Cal. Boxes at the bottom. They can be any frequency new or repeated for comparison purposes
+ * Change the Mode switch to  My 6 selected frequencies
+ * Adjust the waterfall bottom slider to minimize the displayed noise
+ * Now you may see a broken red centered line as the receiver jumps between your channels
+    If the receiver and the stations were all perfect it would be a line at 0 kHz
+ * Use RIT control to select the center of the broken line. This is close to the average error of all the channels you selected
+    You can use the displayed ppm and RIT values in your other programs to minimize the receiver error
+    Note that some programs use a more exact ppm than is implemented in some GNU radio blocks. I limited the ppm here to integers for the RTL-SDR
+ * If you want further accuracy you might have someone with a better calibrated source look at one of your ATSC channels
+    That person can then tell you what the exact frequency error the channels pilot tone is at.
+    Since you are looking at the same frequency, you can adjust your RIT so as to line it up at 0 kHz, the difference is your error!
+	This assumes you are both stationary and not driving down the road putting Doppler on the signal !
+
+Issues and Observations
+1.  I use the Depreciated Selector switch in this program. When a switch position is changed the program stops everything, changes a value and restarts. This will mess up the streaming flow of data. One could program around this, but life is to short for me to tackle that. Any volunteers to come up with another method to switch?
+2. When the 6 MHz step in frequency is made, I have made no effort to line up the FFT to only have valid values for the settled down frequency. This causes smearing of the display when it occurs and is noticeable in the waterfall display at the frequency transition region stepping time.
+3. Internal to the flow graph I use a A/D model previously developed instead of doing the program with vectors. Since then I have developed the program without the A/D but found that the A/D version performs better. Why it’s better has to do with streaming memory allocation and my lack of programming skills, sorry. I have chosen to only post the A/D version.
+    You can use the displayed ppm and RIT values in your other programs to minimize the receiver error
+    Note that some programs use a more exact ppm than is implemented in some GNU radio blocks. I limited the ppm here to integers for the RTL-SDR
+ * If you want further accuracy you might have someone with a better calibrated source look at one of your ATSC channels
+    That person can then tell you what the exact frequency error the channels pilot tone is at.
+    Since you are looking at the same frequency, you can adjust your RIT so as to line it up at 0 kHz, the difference is your error!
+	This assumes you are both stationary and not driving down the road putting Doppler on the signal !
+
+Issues and Observations
+1.  I use the Depreciated Selector switch in this program. When a switch position is changed the program stops everything, changes a value and restarts. This will mess up the streaming flow of data. One could program around this, but life is to short for me to tackle that. Any volunteers to come up with another method to switch?
+2. When the 6 MHz step in frequency is made, I have made no effort to line up the FFT to only have valid values for the settled down frequency. This causes smearing of the display when it occurs and is noticeable in the waterfall display at the frequency transition region stepping time.
+3. Internal to the flow graph I use a A/D model previously developed instead of doing the program with vectors. Since then I have developed the program without the A/D but found that the A/D version performs better. Why it’s better has to do with streaming memory allocation and my lack of programming skills, sorry. I have chosen to only post the A/D version.
+
