@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 ##################################################
 # GNU Radio Python Flow Graph
-# Title: Sat Test 4
+# Title: Sat Test 5
 # Author: WA1CYB
 # Description: Sat Test 4 Linear channels with Doppler,Lock Tone & ID+ nbfm+ +30 nb channels +6 mb channels
-# Generated: Sun Oct 15 20:15:54 2017
+# Generated: Sun Oct 15 20:28:25 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -22,6 +22,7 @@ from PyQt4 import Qt
 from PyQt4.QtCore import QObject, pyqtSlot
 from gnuradio import analog
 from gnuradio import blocks
+from gnuradio import digital
 from gnuradio import eng_notation
 from gnuradio import filter
 from gnuradio import gr
@@ -35,18 +36,19 @@ from grc_gnuradio import blks2 as grc_blks2
 from math import sqrt
 from optparse import OptionParser
 import ConfigParser
+import ham
 import osmosdr
 import sip
 import sys
 import time
 
 
-class sat_test_4(gr.top_block, Qt.QWidget):
+class sat_test_5(gr.top_block, Qt.QWidget):
 
     def __init__(self):
-        gr.top_block.__init__(self, "Sat Test 4")
+        gr.top_block.__init__(self, "Sat Test 5")
         Qt.QWidget.__init__(self)
-        self.setWindowTitle("Sat Test 4")
+        self.setWindowTitle("Sat Test 5")
         try:
             self.setWindowIcon(Qt.QIcon.fromTheme('gnuradio-grc'))
         except:
@@ -63,7 +65,7 @@ class sat_test_4(gr.top_block, Qt.QWidget):
         self.top_grid_layout = Qt.QGridLayout()
         self.top_layout.addLayout(self.top_grid_layout)
 
-        self.settings = Qt.QSettings("GNU Radio", "sat_test_4")
+        self.settings = Qt.QSettings("GNU Radio", "sat_test_5")
         self.restoreGeometry(self.settings.value("geometry").toByteArray())
 
         ##################################################
@@ -99,6 +101,7 @@ class sat_test_4(gr.top_block, Qt.QWidget):
         
         self.wide_xlate_filter_taps_0 = wide_xlate_filter_taps_0 = firdes.low_pass(1.0, samp_rate_sr2, (256*.95)*1e3/4, 0.05*(256e3), firdes.WIN_HAMMING, 6.76)
           
+        self.vector_size_test_0 = vector_size_test_0 = len((1,0,1,0,1,0,1,1,1, 0,0,0,1,0,1,0,1,0,1,1,1, 0,0,0,1,0,1,0,1,0,1,1,1,0,0,0,0,0,0,0,1,1,1,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0, 1,0,1,1,1,0,1,1,1,0,0,0,1,0,1,1,1,0,0,0,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,0,0,1,1,1,0,1,0,1,1,1,0,1,0,0,0,1,1,1,0,1,0,1,1,1,0,1,1,1,0,0,0,1,1,1,0,1,0,1,0,1,0,0,0,0,0,0,0,1,1,1,0,0,0,1,0,0,0,1,0,1,0,1,0,0,0, 1,1,1,0,0,0,1,0,1,0,0,0,1,1,1,0,1, 0,0,0,1,1,1,0,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0))
         self.test_signal_input = test_signal_input = 0
         self.st1_gain = st1_gain = 25.0
         self.st1_freq = st1_freq = 446.3e6
@@ -157,6 +160,9 @@ class sat_test_4(gr.top_block, Qt.QWidget):
         
         self.D9600_xlate_filter_taps_0 = D9600_xlate_filter_taps_0 = firdes.low_pass(1.0, samp_rate_sr2/16, 9.6e3/2, 100, firdes.WIN_HAMMING, 6.76)
           
+        
+        self.BPSK = BPSK = digital.constellation_calcdist(([-1, 1]), ([0, 1]), 4, 1).base()
+        
 
         ##################################################
         # Blocks
@@ -330,24 +336,35 @@ class sat_test_4(gr.top_block, Qt.QWidget):
         self._sr2_sq_thres_min_win = RangeWidget(self._sr2_sq_thres_min_range, self.set_sr2_sq_thres_min, 'SR2 min SQ in dB', "counter_slider", float)
         self.rtl_sdr_1_controls_grid_layout_5.addWidget(self._sr2_sq_thres_min_win,  0,0,1,1)
         self.sr2_dc_iq_offset_0_2_0_0 = analog.sig_source_c(samp_rate_sr2, analog.GR_CONST_WAVE, 0, 1, 0)
-        self.sr2_dc_iq_offset_0_1_1 = analog.sig_source_c(samp_rate_sr1, analog.GR_CONST_WAVE, samp_rate_sr1/2/8, 1, 0)
         self.sr2_dc_iq_offset_0_1_0_0_0 = analog.sig_source_c(samp_rate_sr1, analog.GR_COS_WAVE, -30.5e3-1*chan_width, 1, 0)
         self.sr2_dc_iq_offset_0_1_0_0 = analog.sig_source_c(samp_rate_sr1, analog.GR_COS_WAVE, -(samp_rate_sr1/16)-(samp_rate_sr1/16)/2, 1, 0)
-        self.sr2_dc_iq_offset_0_1_0 = analog.sig_source_c(samp_rate_sr1/2, analog.GR_CONST_WAVE, samp_rate_sr1/2/8, 1, 0)
+        self.sr2_dc_iq_offset_0_1_0 = analog.sig_source_c(samp_rate_sr1/2, analog.GR_CONST_WAVE, -37.e3, 1, 0)
         self.sr2_dc_iq_offset_0_1 = analog.sig_source_c(samp_rate_sr1, analog.GR_COS_WAVE, -9e3, 1, 0)
         self.root_raised_cosine_filter_0_0 = filter.interp_fir_filter_ccf(1, firdes.root_raised_cosine(
-        	1, samp_rate_sr2, 5, 0.35, 200))
+        	1, samp_rate_sr1, 5, 0.35, 200))
         self.root_raised_cosine_filter_0 = filter.interp_fir_filter_ccf(1, firdes.root_raised_cosine(
-        	1, samp_rate_sr2, 5, 0.35, 200))
+        	1, samp_rate_sr1, 5, 0.35, 200))
+        self.rational_resampler_xxx_9_0 = filter.rational_resampler_ccc(
+                interpolation=int(samp_rate_sr2/16)/8,
+                decimation=int(samp_rate_sr2),
+                taps=None,
+                fractional_bw=None,
+        )
+        self.rational_resampler_xxx_8 = filter.rational_resampler_ccc(
+                interpolation=int(samp_rate_sr1/4)/2/2/32,
+                decimation=audio_rate,
+                taps=None,
+                fractional_bw=None,
+        )
         self.rational_resampler_xxx_5 = filter.rational_resampler_ccc(
                 interpolation=1,
                 decimation=2,
                 taps=None,
                 fractional_bw=None,
         )
-        self.rational_resampler_xxx_3 = filter.rational_resampler_ccc(
-                interpolation=1,
-                decimation=4,
+        self.rational_resampler_xxx_3_0 = filter.rational_resampler_ccc(
+                interpolation=100,
+                decimation=1,
                 taps=None,
                 fractional_bw=None,
         )
@@ -357,15 +374,15 @@ class sat_test_4(gr.top_block, Qt.QWidget):
                 taps=None,
                 fractional_bw=None,
         )
-        self.rational_resampler_xxx_1 = filter.rational_resampler_ccc(
-                interpolation=1,
-                decimation=2,
+        self.rational_resampler_xxx_1_0 = filter.rational_resampler_ccc(
+                interpolation=int(samp_rate_sr1/4)/2/2/8,
+                decimation=48000,
                 taps=None,
                 fractional_bw=None,
         )
-        self.rational_resampler_xxx_0_0_0_0_0_0_0_0_0_0_0 = filter.rational_resampler_ccc(
-                interpolation=int(samp_rate_sr2/4)/2/2/8,
-                decimation=int(samp_rate_sr2),
+        self.rational_resampler_xxx_1 = filter.rational_resampler_ccc(
+                interpolation=1,
+                decimation=2,
                 taps=None,
                 fractional_bw=None,
         )
@@ -381,12 +398,6 @@ class sat_test_4(gr.top_block, Qt.QWidget):
                 taps=None,
                 fractional_bw=None,
         )
-        self.rational_resampler_xxx_0_0_0_0_0_0_0_0 = filter.rational_resampler_ccc(
-                interpolation=int(samp_rate_sr1),
-                decimation=int(samp_rate_sr1/2),
-                taps=None,
-                fractional_bw=None,
-        )
         self.rational_resampler_xxx_0_0_0_0_0_0_0 = filter.rational_resampler_ccc(
                 interpolation=int(samp_rate_sr1),
                 decimation=int(samp_rate_sr1/16),
@@ -399,42 +410,6 @@ class sat_test_4(gr.top_block, Qt.QWidget):
                 taps=None,
                 fractional_bw=None,
         )
-        self.qtgui_waterfall_sink_x_0_1 = qtgui.waterfall_sink_c(
-        	1024, #size
-        	firdes.WIN_BLACKMAN_hARRIS, #wintype
-        	0, #fc
-        	samp_rate_sr1/4, #bw
-        	"Output- as seen on Gnd", #name
-                1 #number of inputs
-        )
-        self.qtgui_waterfall_sink_x_0_1.set_update_time(0.10)
-        self.qtgui_waterfall_sink_x_0_1.enable_grid(False)
-        self.qtgui_waterfall_sink_x_0_1.enable_axis_labels(True)
-        
-        if not True:
-          self.qtgui_waterfall_sink_x_0_1.disable_legend()
-        
-        if "complex" == "float" or "complex" == "msg_float":
-          self.qtgui_waterfall_sink_x_0_1.set_plot_pos_half(not True)
-        
-        labels = ['', '', '', '', '',
-                  '', '', '', '', '']
-        colors = [0, 0, 0, 0, 0,
-                  0, 0, 0, 0, 0]
-        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
-                  1.0, 1.0, 1.0, 1.0, 1.0]
-        for i in xrange(1):
-            if len(labels[i]) == 0:
-                self.qtgui_waterfall_sink_x_0_1.set_line_label(i, "Data {0}".format(i))
-            else:
-                self.qtgui_waterfall_sink_x_0_1.set_line_label(i, labels[i])
-            self.qtgui_waterfall_sink_x_0_1.set_color_map(i, colors[i])
-            self.qtgui_waterfall_sink_x_0_1.set_line_alpha(i, alphas[i])
-        
-        self.qtgui_waterfall_sink_x_0_1.set_intensity_range(-50, 0)
-        
-        self._qtgui_waterfall_sink_x_0_1_win = sip.wrapinstance(self.qtgui_waterfall_sink_x_0_1.pyqwidget(), Qt.QWidget)
-        self.top_grid_layout.addWidget(self._qtgui_waterfall_sink_x_0_1_win, 2,3,1,1)
         self.qtgui_waterfall_sink_x_0 = qtgui.waterfall_sink_c(
         	1024, #size
         	firdes.WIN_BLACKMAN_hARRIS, #wintype
@@ -514,6 +489,49 @@ class sat_test_4(gr.top_block, Qt.QWidget):
         
         self._qtgui_freq_sink_x_2_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_2_0.pyqwidget(), Qt.QWidget)
         self.top_grid_layout.addWidget(self._qtgui_freq_sink_x_2_0_win, 6,0,1,3)
+        self.qtgui_freq_sink_x_0_0 = qtgui.freq_sink_c(
+        	1024, #size
+        	firdes.WIN_BLACKMAN_hARRIS, #wintype
+        	sr2_rcv_tun_freq, #fc
+        	samp_rate_sr2, #bw
+        	"SR2 Input- Pre pseudo Doppler", #name
+        	1 #number of inputs
+        )
+        self.qtgui_freq_sink_x_0_0.set_update_time(0.10)
+        self.qtgui_freq_sink_x_0_0.set_y_axis(-100, 10)
+        self.qtgui_freq_sink_x_0_0.set_y_label('Relative Gain', 'dB')
+        self.qtgui_freq_sink_x_0_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, 0.0, 0, "")
+        self.qtgui_freq_sink_x_0_0.enable_autoscale(False)
+        self.qtgui_freq_sink_x_0_0.enable_grid(True)
+        self.qtgui_freq_sink_x_0_0.set_fft_average(1.0)
+        self.qtgui_freq_sink_x_0_0.enable_axis_labels(True)
+        self.qtgui_freq_sink_x_0_0.enable_control_panel(False)
+        
+        if not True:
+          self.qtgui_freq_sink_x_0_0.disable_legend()
+        
+        if "complex" == "float" or "complex" == "msg_float":
+          self.qtgui_freq_sink_x_0_0.set_plot_pos_half(not True)
+        
+        labels = ['', '', '', '', '',
+                  '', '', '', '', '']
+        widths = [1, 1, 1, 1, 1,
+                  1, 1, 1, 1, 1]
+        colors = ["blue", "red", "green", "black", "cyan",
+                  "magenta", "yellow", "dark red", "dark green", "dark blue"]
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+                  1.0, 1.0, 1.0, 1.0, 1.0]
+        for i in xrange(1):
+            if len(labels[i]) == 0:
+                self.qtgui_freq_sink_x_0_0.set_line_label(i, "Data {0}".format(i))
+            else:
+                self.qtgui_freq_sink_x_0_0.set_line_label(i, labels[i])
+            self.qtgui_freq_sink_x_0_0.set_line_width(i, widths[i])
+            self.qtgui_freq_sink_x_0_0.set_line_color(i, colors[i])
+            self.qtgui_freq_sink_x_0_0.set_line_alpha(i, alphas[i])
+        
+        self._qtgui_freq_sink_x_0_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0_0.pyqwidget(), Qt.QWidget)
+        self.top_grid_layout.addWidget(self._qtgui_freq_sink_x_0_0_win, 2,3,1,1)
         self.qtgui_freq_sink_x_0 = qtgui.freq_sink_c(
         	1024, #size
         	firdes.WIN_BLACKMAN_hARRIS, #wintype
@@ -587,7 +605,7 @@ class sat_test_4(gr.top_block, Qt.QWidget):
         	
         self.osmosdr_source_0 = osmosdr.source( args="numchan=" + str(1) + " " + '' )
         self.osmosdr_source_0.set_sample_rate(samp_rate_sr2)
-        self.osmosdr_source_0.set_center_freq(sr2_rcv_tun_freq-sr2_freq_offset-offset_temp, 0)
+        self.osmosdr_source_0.set_center_freq(sr2_rcv_tun_freq+sr2_freq_offset-offset_temp, 0)
         self.osmosdr_source_0.set_freq_corr(sr2_ppm, 0)
         self.osmosdr_source_0.set_dc_offset_mode(2, 0)
         self.osmosdr_source_0.set_iq_balance_mode(2, 0)
@@ -600,9 +618,21 @@ class sat_test_4(gr.top_block, Qt.QWidget):
           
         self.low_pass_filter_0_2_0_2_0_0 = filter.fir_filter_ccf(1, firdes.low_pass(
         	1, int(samp_rate_sr1/16), 7500*2, 400, firdes.WIN_HAMMING, 6.76))
+        self.ham_varicode_tx_0 = ham.varicode_tx()
         self.freq_xlating_fft_filter_ccc_0 = filter.freq_xlating_fft_filter_ccc(8, (lpf_taps), -int(1.5*samp_rate_sr1/16), samp_rate_sr1/2)
         self.freq_xlating_fft_filter_ccc_0.set_nthreads(1)
         self.freq_xlating_fft_filter_ccc_0.declare_sample_delay(0)
+        self.digital_psk_mod_0_0 = digital.psk.psk_mod(
+          constellation_points=2,
+          mod_code="none",
+          differential=True,
+          samples_per_symbol=8,
+          excess_bw=0.35,
+          verbose=False,
+          log=False,
+          )
+        self.digital_map_bb_0_0 = digital.map_bb(([1,0]))
+        self.blocks_vector_source_x_0_0_0 = blocks.vector_source_b((1,0,1,0,1,0,1,1,1, 0,0,0,1,0,1,0,1,0,1,1,1, 0,0,0,1,0,1,0,1,0,1,1,1,0,0,0,0,0,0,0,1,1,1,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0, 1,0,1,1,1,0,1,1,1,0,0,0,1,0,1,1,1,0,0,0,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,0,0,1,1,1,0,1,0,1,1,1,0,1,0,0,0,1,1,1,0,1,0,1,1,1,0,1,1,1,0,0,0,1,1,1,0,1,0,1,0,1,0,0,0,0,0,0,0,1,1,1,0,0,0,1,0,0,0,1,0,1,0,1,0,0,0, 1,1,1,0,0,0,1,0,1,0,0,0,1,1,1,0,1, 0,0,0,1,1,1,0,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0), True, 1, [])
         self.blocks_vector_source_x_0 = blocks.vector_source_c((1,0,1,0,1,0,1,1,1, 0,0,0,1,0,1,0,1,0,1,1,1, 0,0,0,1,0,1,0,1,0,1,1,1,0,0,0,0,0,0,0,1,1,1,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0, 1,0,1,1,1,0,1,1,1,0,0,0,1,0,1,1,1,0,0,0,1,0,1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0,0,0,1,1,1,0,1,0,1,1,1,0,1,0,0,0,1,1,1,0,1,0,1,1,1,0,1,1,1,0,0,0,1,1,1,0,1,0,1,0,1,0,0,0,0,0,0,0,1,1,1,0,0,0,1,0,0,0,1,0,1,0,1,0,0,0, 1,1,1,0,0,0,1,0,1,0,0,0,1,1,1,0,1, 0,0,0,1,1,1,0,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0), True, 1, [])
         self.blocks_vco_c_0_3 = blocks.vco_c(samp_rate_sr2, 2*(22/7)*(2*50e3)*((sr1_freq-offset_temp)/st1_freq), 1)
         self.blocks_vco_c_0_2 = blocks.vco_c(samp_rate_sr1, 2*(22/7)*(2*130e3), .05)
@@ -611,28 +641,37 @@ class sat_test_4(gr.top_block, Qt.QWidget):
         self.blocks_vco_c_0_0_0 = blocks.vco_c(samp_rate_sr2, 2*(22/7)*(2*150e3)*((sr1_freq-offset_temp)/st1_freq), 1)
         self.blocks_vco_c_0_0 = blocks.vco_c(samp_rate_sr2, 2*(22/7)*(2*150e3), 1)
         self.blocks_vco_c_0 = blocks.vco_c(samp_rate_sr2, 2*(22/7)*(2*50e3), 1)
+        self.blocks_unpacked_to_packed_xx_0_0 = blocks.unpacked_to_packed_bb(1, gr.GR_MSB_FIRST)
         self.blocks_repeat_0 = blocks.repeat(gr.sizeof_gr_complex*1, int(1.2 * audio_rate / (wpm/5)))
         self.blocks_null_source_4 = blocks.null_source(gr.sizeof_gr_complex*1)
+        self.blocks_null_source_3 = blocks.null_source(gr.sizeof_gr_complex*1)
         self.blocks_null_source_1 = blocks.null_source(gr.sizeof_gr_complex*1)
+        self.blocks_null_sink_4 = blocks.null_sink(gr.sizeof_gr_complex*1)
         self.blocks_null_sink_3 = blocks.null_sink(gr.sizeof_gr_complex*1)
         self.blocks_null_sink_2 = blocks.null_sink(gr.sizeof_gr_complex*1)
-        self.blocks_multiply_xx_1_0_0_1 = blocks.multiply_vcc(1)
+        self.blocks_null_sink_0 = blocks.null_sink(gr.sizeof_gr_complex*1)
         self.blocks_multiply_xx_1_0_0_0_0_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_1_0_0_0_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_1_0_0_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_1_0_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_1 = blocks.multiply_vcc(1)
+        self.blocks_multiply_xx_0_0_0_1 = blocks.multiply_vcc(1)
+        self.blocks_multiply_xx_0_0_0_0 = blocks.multiply_vcc(1)
+        self.blocks_multiply_xx_0_0_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_0_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_const_vxx_5 = blocks.multiply_const_vcc((0.07, ))
         self.blocks_multiply_const_vxx_4 = blocks.multiply_const_vff((1, ))
         self.blocks_multiply_const_vxx_2 = blocks.multiply_const_vcc((sr1_atten_linear, ))
-        self.blocks_multiply_const_vxx_1 = blocks.multiply_const_vcc((sr1_atten_linear*.1, ))
+        self.blocks_multiply_const_vxx_1_0 = blocks.multiply_const_vcc((sr1_atten_linear*.1, ))
+        self.blocks_multiply_const_vxx_1 = blocks.multiply_const_vcc((0.3, ))
         self.blocks_multiply_const_vxx_0_1_0_0 = blocks.multiply_const_vcc((120., ))
         self.blocks_multiply_const_vxx_0_1_0 = blocks.multiply_const_vcc((12, ))
         self.blocks_multiply_const_vxx_0_1 = blocks.multiply_const_vcc((.00001, ))
         self.blocks_multiply_const_vxx_0 = blocks.multiply_const_vcc((0.1, ))
         self.blocks_add_xx_4 = blocks.add_vcc(1)
+        self.blocks_add_xx_3 = blocks.add_vcc(1)
+        self.blocks_add_xx_2 = blocks.add_vcc(1)
         self.blocks_add_xx_1 = blocks.add_vcc(1)
         self.blocks_add_xx_0 = blocks.add_vcc(1)
         self.blks2_selector_sr1 = grc_blks2.selector(
@@ -661,6 +700,9 @@ class sat_test_4(gr.top_block, Qt.QWidget):
         self.top_layout.addWidget(self._atten_in_dB_win)
         self.analog_sig_source_x_1_1 = analog.sig_source_c(samp_rate_sr1, analog.GR_CONST_WAVE, +2**16, .00001, 0)
         self.analog_sig_source_x_1_0 = analog.sig_source_c(samp_rate_sr2, analog.GR_COS_WAVE, -30.5e3, 1, 0)
+        self.analog_sig_source_x_0_0_1_1 = analog.sig_source_c(audio_rate, analog.GR_COS_WAVE, 2000, (1./100), 0)
+        self.analog_sig_source_x_0_0_1_0 = analog.sig_source_c(audio_rate, analog.GR_COS_WAVE, 3000, (1./100), 0)
+        self.analog_sig_source_x_0_0_1 = analog.sig_source_c(audio_rate, analog.GR_COS_WAVE, 1000, (1./100), 0)
         self.analog_sig_source_x_0_0 = analog.sig_source_c(samp_rate_sr2, analog.GR_CONST_WAVE, 0, 1, 0)
         self.analog_sig_source_x_0 = analog.sig_source_c(samp_rate_sr2, analog.GR_CONST_WAVE, 0, 1, 0)
         self.analog_pwr_squelch_xx_0_0_1 = analog.pwr_squelch_cc((sr1_sq_thres_min), .001, 1, False)
@@ -677,7 +719,7 @@ class sat_test_4(gr.top_block, Qt.QWidget):
         	audio_rate=int(samp_rate_sr1/16)/5,
         	quad_rate=int(samp_rate_sr1/16),
         	tau=75e-6,
-        	max_dev=5e3,
+        	max_dev=8.9e3,
           )
         self.analog_fastnoise_source_x_1 = analog.fastnoise_source_c(analog.GR_GAUSSIAN, 1, 0, 8192)
         self.analog_agc2_xx_0_0_0_2 = analog.agc2_cc(1e-1, 1e-2, 1.0, 1.0)
@@ -698,19 +740,25 @@ class sat_test_4(gr.top_block, Qt.QWidget):
         self.connect((self.analog_pwr_squelch_xx_0_0_1, 0), (self.blocks_multiply_const_vxx_0_1, 0))    
         self.connect((self.analog_sig_source_x_0, 0), (self.blks2_selector_0, 0))    
         self.connect((self.analog_sig_source_x_0_0, 0), (self.blks2_selector_sr1, 0))    
+        self.connect((self.analog_sig_source_x_0_0_1, 0), (self.blocks_multiply_xx_0_0_0, 1))    
+        self.connect((self.analog_sig_source_x_0_0_1_0, 0), (self.blocks_multiply_xx_0_0_0_0, 1))    
+        self.connect((self.analog_sig_source_x_0_0_1_1, 0), (self.blocks_multiply_xx_0_0_0_1, 1))    
         self.connect((self.analog_sig_source_x_1_0, 0), (self.blocks_multiply_xx_1, 1))    
         self.connect((self.analog_sig_source_x_1_1, 0), (self.blks2_selector_1, 0))    
         self.connect((self.blks2_selector_0, 0), (self.blocks_multiply_xx_0_0, 0))    
         self.connect((self.blks2_selector_1, 0), (self.blocks_add_xx_4, 2))    
         self.connect((self.blks2_selector_sr1, 0), (self.blocks_multiply_xx_0, 0))    
-        self.connect((self.blocks_add_xx_0, 0), (self.pfb_synthesizer_ccf_0_0, 1))    
+        self.connect((self.blocks_add_xx_0, 0), (self.rational_resampler_xxx_1_0, 0))    
         self.connect((self.blocks_add_xx_1, 0), (self.blocks_multiply_xx_0_0, 1))    
+        self.connect((self.blocks_add_xx_2, 0), (self.pfb_synthesizer_ccf_0_0, 7))    
+        self.connect((self.blocks_add_xx_3, 0), (self.pfb_synthesizer_ccf_0_0, 1))    
         self.connect((self.blocks_add_xx_4, 0), (self.blocks_multiply_xx_0, 1))    
         self.connect((self.blocks_multiply_const_vxx_0, 0), (self.blks2_selector_1, 1))    
-        self.connect((self.blocks_multiply_const_vxx_0_1, 0), (self.rational_resampler_xxx_0_0_0_0_0_0_0_0, 0))    
+        self.connect((self.blocks_multiply_const_vxx_0_1, 0), (self.blocks_null_sink_4, 0))    
         self.connect((self.blocks_multiply_const_vxx_0_1_0, 0), (self.rational_resampler_xxx_0_0_0_0_0_0_0_0_0, 0))    
         self.connect((self.blocks_multiply_const_vxx_0_1_0_0, 0), (self.rational_resampler_xxx_0_0_0_0_0_0_0_0_0_0, 0))    
-        self.connect((self.blocks_multiply_const_vxx_1, 0), (self.rational_resampler_xxx_0_0_0_0_0_0_0_0_0_0_0, 0))    
+        self.connect((self.blocks_multiply_const_vxx_1, 0), (self.pfb_synthesizer_ccf_0, 17))    
+        self.connect((self.blocks_multiply_const_vxx_1_0, 0), (self.rational_resampler_xxx_9_0, 0))    
         self.connect((self.blocks_multiply_const_vxx_2, 0), (self.rational_resampler_xxx_5, 0))    
         self.connect((self.blocks_multiply_const_vxx_4, 0), (self.blocks_vco_c_0_0_0, 0))    
         self.connect((self.blocks_multiply_const_vxx_4, 0), (self.blocks_vco_c_0_1_0, 0))    
@@ -720,17 +768,20 @@ class sat_test_4(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_multiply_xx_0_0, 0), (self.blocks_multiply_const_vxx_5, 0))    
         self.connect((self.blocks_multiply_xx_0_0, 0), (self.qtgui_freq_sink_x_2_0, 0))    
         self.connect((self.blocks_multiply_xx_0_0, 0), (self.qtgui_waterfall_sink_x_0, 0))    
-        self.connect((self.blocks_multiply_xx_0_0, 0), (self.rational_resampler_xxx_3, 0))    
+        self.connect((self.blocks_multiply_xx_0_0_0, 0), (self.blocks_add_xx_0, 2))    
+        self.connect((self.blocks_multiply_xx_0_0_0_0, 0), (self.blocks_add_xx_0, 0))    
+        self.connect((self.blocks_multiply_xx_0_0_0_1, 0), (self.blocks_add_xx_0, 1))    
         self.connect((self.blocks_multiply_xx_1, 0), (self.blocks_add_xx_1, 1))    
         self.connect((self.blocks_multiply_xx_1_0_0, 0), (self.blocks_add_xx_1, 2))    
         self.connect((self.blocks_multiply_xx_1_0_0_0, 0), (self.analog_agc2_xx_0_0_0_2, 0))    
         self.connect((self.blocks_multiply_xx_1_0_0_0_0, 0), (self.blocks_add_xx_1, 4))    
         self.connect((self.blocks_multiply_xx_1_0_0_0_0_0, 0), (self.blocks_add_xx_1, 5))    
-        self.connect((self.blocks_multiply_xx_1_0_0_1, 0), (self.blocks_add_xx_1, 3))    
         self.connect((self.blocks_null_source_1, 0), (self.blocks_add_xx_4, 1))    
+        self.connect((self.blocks_null_source_3, 0), (self.blocks_add_xx_1, 3))    
         self.connect((self.blocks_null_source_4, 0), (self.pfb_synthesizer_ccf_0_0, 3))    
         self.connect((self.blocks_null_source_4, 0), (self.pfb_synthesizer_ccf_0_0, 4))    
         self.connect((self.blocks_repeat_0, 0), (self.root_raised_cosine_filter_0, 0))    
+        self.connect((self.blocks_unpacked_to_packed_xx_0_0, 0), (self.digital_psk_mod_0_0, 0))    
         self.connect((self.blocks_vco_c_0, 0), (self.blks2_selector_0, 1))    
         self.connect((self.blocks_vco_c_0_0, 0), (self.blks2_selector_0, 2))    
         self.connect((self.blocks_vco_c_0_0_0, 0), (self.blks2_selector_sr1, 2))    
@@ -739,10 +790,16 @@ class sat_test_4(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_vco_c_0_2, 0), (self.blks2_selector_1, 2))    
         self.connect((self.blocks_vco_c_0_3, 0), (self.blks2_selector_sr1, 1))    
         self.connect((self.blocks_vector_source_x_0, 0), (self.blocks_repeat_0, 0))    
+        self.connect((self.blocks_vector_source_x_0_0_0, 0), (self.ham_varicode_tx_0, 0))    
+        self.connect((self.digital_map_bb_0_0, 0), (self.blocks_unpacked_to_packed_xx_0_0, 0))    
+        self.connect((self.digital_psk_mod_0_0, 0), (self.rational_resampler_xxx_3_0, 0))    
         self.connect((self.freq_xlating_fft_filter_ccc_0, 0), (self.analog_pwr_squelch_xx_0_0_0_0, 0))    
         self.connect((self.freq_xlating_fft_filter_ccc_0, 0), (self.pfb_channelizer_ccf_0_0, 0))    
+        self.connect((self.ham_varicode_tx_0, 0), (self.digital_map_bb_0_0, 0))    
         self.connect((self.low_pass_filter_0_2_0_2_0_0, 0), (self.rational_resampler_xxx_0_0_0_0_0_0_0, 0))    
-        self.connect((self.osmosdr_source_0, 0), (self.blocks_multiply_const_vxx_1, 0))    
+        self.connect((self.osmosdr_source_0, 0), (self.blocks_multiply_const_vxx_1_0, 0))    
+        self.connect((self.osmosdr_source_0, 0), (self.qtgui_freq_sink_x_0_0, 0))    
+        self.connect((self.pfb_channelizer_ccf_0, 17), (self.blocks_null_sink_0, 0))    
         self.connect((self.pfb_channelizer_ccf_0, 10), (self.pfb_synthesizer_ccf_0, 10))    
         self.connect((self.pfb_channelizer_ccf_0, 11), (self.pfb_synthesizer_ccf_0, 11))    
         self.connect((self.pfb_channelizer_ccf_0, 12), (self.pfb_synthesizer_ccf_0, 12))    
@@ -750,7 +807,6 @@ class sat_test_4(gr.top_block, Qt.QWidget):
         self.connect((self.pfb_channelizer_ccf_0, 14), (self.pfb_synthesizer_ccf_0, 14))    
         self.connect((self.pfb_channelizer_ccf_0, 15), (self.pfb_synthesizer_ccf_0, 15))    
         self.connect((self.pfb_channelizer_ccf_0, 16), (self.pfb_synthesizer_ccf_0, 16))    
-        self.connect((self.pfb_channelizer_ccf_0, 17), (self.pfb_synthesizer_ccf_0, 17))    
         self.connect((self.pfb_channelizer_ccf_0, 18), (self.pfb_synthesizer_ccf_0, 18))    
         self.connect((self.pfb_channelizer_ccf_0, 19), (self.pfb_synthesizer_ccf_0, 19))    
         self.connect((self.pfb_channelizer_ccf_0, 20), (self.pfb_synthesizer_ccf_0, 20))    
@@ -775,14 +831,14 @@ class sat_test_4(gr.top_block, Qt.QWidget):
         self.connect((self.pfb_channelizer_ccf_0, 4), (self.pfb_synthesizer_ccf_0, 4))    
         self.connect((self.pfb_channelizer_ccf_0, 5), (self.pfb_synthesizer_ccf_0, 5))    
         self.connect((self.pfb_channelizer_ccf_0, 6), (self.pfb_synthesizer_ccf_0, 6))    
-        self.connect((self.pfb_channelizer_ccf_0_0, 1), (self.blocks_add_xx_0, 1))    
+        self.connect((self.pfb_channelizer_ccf_0_0, 7), (self.blocks_add_xx_2, 1))    
+        self.connect((self.pfb_channelizer_ccf_0_0, 1), (self.blocks_add_xx_3, 1))    
         self.connect((self.pfb_channelizer_ccf_0_0, 3), (self.blocks_null_sink_2, 0))    
         self.connect((self.pfb_channelizer_ccf_0_0, 4), (self.blocks_null_sink_3, 0))    
         self.connect((self.pfb_channelizer_ccf_0_0, 0), (self.pfb_synthesizer_ccf_0_0, 0))    
         self.connect((self.pfb_channelizer_ccf_0_0, 2), (self.pfb_synthesizer_ccf_0_0, 2))    
         self.connect((self.pfb_channelizer_ccf_0_0, 5), (self.pfb_synthesizer_ccf_0_0, 5))    
         self.connect((self.pfb_channelizer_ccf_0_0, 6), (self.pfb_synthesizer_ccf_0_0, 6))    
-        self.connect((self.pfb_channelizer_ccf_0_0, 7), (self.pfb_synthesizer_ccf_0_0, 7))    
         self.connect((self.pfb_synthesizer_ccf_0, 0), (self.blocks_multiply_const_vxx_0_1_0, 0))    
         self.connect((self.pfb_synthesizer_ccf_0_0, 0), (self.blocks_multiply_const_vxx_0_1_0_0, 0))    
         self.connect((self.pseudo_doppler_source, 0), (self.blocks_multiply_const_vxx_4, 0))    
@@ -792,29 +848,32 @@ class sat_test_4(gr.top_block, Qt.QWidget):
         self.connect((self.pseudo_doppler_source_0, 0), (self.blocks_vco_c_0_2, 0))    
         self.connect((self.rational_resampler_xxx_0, 0), (self.analog_agc2_xx_0_0, 0))    
         self.connect((self.rational_resampler_xxx_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_1_0_0, 0))    
-        self.connect((self.rational_resampler_xxx_0_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_1_0_0_1, 0))    
         self.connect((self.rational_resampler_xxx_0_0_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_1_0_0_0_0, 0))    
         self.connect((self.rational_resampler_xxx_0_0_0_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_1_0_0_0_0_0, 0))    
-        self.connect((self.rational_resampler_xxx_0_0_0_0_0_0_0_0_0_0_0, 0), (self.blocks_add_xx_0, 0))    
         self.connect((self.rational_resampler_xxx_1, 0), (self.rational_resampler_xxx_0, 0))    
+        self.connect((self.rational_resampler_xxx_1_0, 0), (self.blocks_add_xx_2, 0))    
         self.connect((self.rational_resampler_xxx_2, 0), (self.qtgui_freq_sink_x_0, 0))    
         self.connect((self.rational_resampler_xxx_2, 0), (self.rational_resampler_xxx_1, 0))    
-        self.connect((self.rational_resampler_xxx_3, 0), (self.qtgui_waterfall_sink_x_0_1, 0))    
+        self.connect((self.rational_resampler_xxx_3_0, 0), (self.blocks_multiply_xx_0_0_0, 0))    
+        self.connect((self.rational_resampler_xxx_3_0, 0), (self.blocks_multiply_xx_0_0_0_0, 0))    
+        self.connect((self.rational_resampler_xxx_3_0, 0), (self.blocks_multiply_xx_0_0_0_1, 0))    
+        self.connect((self.rational_resampler_xxx_3_0, 0), (self.rational_resampler_xxx_8, 0))    
         self.connect((self.rational_resampler_xxx_5, 0), (self.blocks_multiply_xx_1_0_0_0, 0))    
         self.connect((self.rational_resampler_xxx_5, 0), (self.freq_xlating_fft_filter_ccc_0, 0))    
         self.connect((self.rational_resampler_xxx_5, 0), (self.rational_resampler_xxx_2, 0))    
+        self.connect((self.rational_resampler_xxx_8, 0), (self.blocks_multiply_const_vxx_1, 0))    
+        self.connect((self.rational_resampler_xxx_9_0, 0), (self.blocks_add_xx_3, 0))    
         self.connect((self.root_raised_cosine_filter_0, 0), (self.root_raised_cosine_filter_0_0, 0))    
         self.connect((self.root_raised_cosine_filter_0_0, 0), (self.blocks_multiply_xx_1, 0))    
         self.connect((self.sr2_dc_iq_offset_0_1, 0), (self.blocks_multiply_xx_1_0_0, 1))    
         self.connect((self.sr2_dc_iq_offset_0_1_0, 0), (self.blocks_multiply_xx_1_0_0_0, 1))    
         self.connect((self.sr2_dc_iq_offset_0_1_0_0, 0), (self.blocks_multiply_xx_1_0_0_0_0, 1))    
         self.connect((self.sr2_dc_iq_offset_0_1_0_0_0, 0), (self.blocks_multiply_xx_1_0_0_0_0_0, 1))    
-        self.connect((self.sr2_dc_iq_offset_0_1_1, 0), (self.blocks_multiply_xx_1_0_0_1, 1))    
         self.connect((self.sr2_dc_iq_offset_0_2_0_0, 0), (self.blocks_add_xx_1, 0))    
         self.connect((self.uhd_usrp_source_0_0_0, 0), (self.blocks_add_xx_4, 0))    
 
     def closeEvent(self, event):
-        self.settings = Qt.QSettings("GNU Radio", "sat_test_4")
+        self.settings = Qt.QSettings("GNU Radio", "sat_test_5")
         self.settings.setValue("geometry", self.saveGeometry())
         event.accept()
 
@@ -827,16 +886,14 @@ class sat_test_4(gr.top_block, Qt.QWidget):
         self.set_chan_width(int(self.samp_rate_sr1/8)/16/4)
         self.uhd_usrp_source_0_0_0.set_samp_rate(self.samp_rate_sr1)
         self.uhd_usrp_sink_0.set_samp_rate(self.samp_rate_sr1)
-        self.sr2_dc_iq_offset_0_1_1.set_sampling_freq(self.samp_rate_sr1)
-        self.sr2_dc_iq_offset_0_1_1.set_frequency(self.samp_rate_sr1/2/8)
         self.sr2_dc_iq_offset_0_1_0_0_0.set_sampling_freq(self.samp_rate_sr1)
         self.sr2_dc_iq_offset_0_1_0_0.set_sampling_freq(self.samp_rate_sr1)
         self.sr2_dc_iq_offset_0_1_0_0.set_frequency(-(self.samp_rate_sr1/16)-(self.samp_rate_sr1/16)/2)
         self.sr2_dc_iq_offset_0_1_0.set_sampling_freq(self.samp_rate_sr1/2)
-        self.sr2_dc_iq_offset_0_1_0.set_frequency(self.samp_rate_sr1/2/8)
         self.sr2_dc_iq_offset_0_1.set_sampling_freq(self.samp_rate_sr1)
         self.set_samp_rate_UHD(self.samp_rate_sr1)
-        self.qtgui_waterfall_sink_x_0_1.set_frequency_range(0, self.samp_rate_sr1/4)
+        self.root_raised_cosine_filter_0_0.set_taps(firdes.root_raised_cosine(1, self.samp_rate_sr1, 5, 0.35, 200))
+        self.root_raised_cosine_filter_0.set_taps(firdes.root_raised_cosine(1, self.samp_rate_sr1, 5, 0.35, 200))
         self.qtgui_waterfall_sink_x_0.set_frequency_range(0, self.samp_rate_sr1)
         self.qtgui_freq_sink_x_2_0.set_frequency_range(0, self.samp_rate_sr1)
         self.qtgui_freq_sink_x_0.set_frequency_range(self.sr1_freq+self.sr1_rit, self.samp_rate_sr1/4)
@@ -894,8 +951,7 @@ class sat_test_4(gr.top_block, Qt.QWidget):
     def set_samp_rate_sr2(self, samp_rate_sr2):
         self.samp_rate_sr2 = samp_rate_sr2
         self.sr2_dc_iq_offset_0_2_0_0.set_sampling_freq(self.samp_rate_sr2)
-        self.root_raised_cosine_filter_0_0.set_taps(firdes.root_raised_cosine(1, self.samp_rate_sr2, 5, 0.35, 200))
-        self.root_raised_cosine_filter_0.set_taps(firdes.root_raised_cosine(1, self.samp_rate_sr2, 5, 0.35, 200))
+        self.qtgui_freq_sink_x_0_0.set_frequency_range(self.sr2_rcv_tun_freq, self.samp_rate_sr2)
         self.pseudo_doppler_source_0.set_sampling_freq(self.samp_rate_sr2)
         self.pseudo_doppler_source.set_sampling_freq(self.samp_rate_sr2)
         self.osmosdr_source_0.set_sample_rate(self.samp_rate_sr2)
@@ -950,6 +1006,12 @@ class sat_test_4(gr.top_block, Qt.QWidget):
     def set_wide_xlate_filter_taps_0(self, wide_xlate_filter_taps_0):
         self.wide_xlate_filter_taps_0 = wide_xlate_filter_taps_0
 
+    def get_vector_size_test_0(self):
+        return self.vector_size_test_0
+
+    def set_vector_size_test_0(self, vector_size_test_0):
+        self.vector_size_test_0 = vector_size_test_0
+
     def get_test_signal_input(self):
         return self.test_signal_input
 
@@ -989,7 +1051,8 @@ class sat_test_4(gr.top_block, Qt.QWidget):
 
     def set_sr2_rcv_tun_freq(self, sr2_rcv_tun_freq):
         self.sr2_rcv_tun_freq = sr2_rcv_tun_freq
-        self.osmosdr_source_0.set_center_freq(self.sr2_rcv_tun_freq-self.sr2_freq_offset-self.offset_temp, 0)
+        self.qtgui_freq_sink_x_0_0.set_frequency_range(self.sr2_rcv_tun_freq, self.samp_rate_sr2)
+        self.osmosdr_source_0.set_center_freq(self.sr2_rcv_tun_freq+self.sr2_freq_offset-self.offset_temp, 0)
 
     def get_sr2_rcv_rf_tun_gain_if(self):
         return self.sr2_rcv_rf_tun_gain_if
@@ -1017,7 +1080,7 @@ class sat_test_4(gr.top_block, Qt.QWidget):
 
     def set_sr2_freq_offset(self, sr2_freq_offset):
         self.sr2_freq_offset = sr2_freq_offset
-        self.osmosdr_source_0.set_center_freq(self.sr2_rcv_tun_freq-self.sr2_freq_offset-self.offset_temp, 0)
+        self.osmosdr_source_0.set_center_freq(self.sr2_rcv_tun_freq+self.sr2_freq_offset-self.offset_temp, 0)
 
     def get_sr1_sq_thres_min(self):
         return self.sr1_sq_thres_min
@@ -1065,7 +1128,7 @@ class sat_test_4(gr.top_block, Qt.QWidget):
     def set_sr1_atten_linear(self, sr1_atten_linear):
         self.sr1_atten_linear = sr1_atten_linear
         self.blocks_multiply_const_vxx_2.set_k((self.sr1_atten_linear, ))
-        self.blocks_multiply_const_vxx_1.set_k((self.sr1_atten_linear*.1, ))
+        self.blocks_multiply_const_vxx_1_0.set_k((self.sr1_atten_linear*.1, ))
 
     def get_sb_xlate_filter_taps_0(self):
         return self.sb_xlate_filter_taps_0
@@ -1124,7 +1187,7 @@ class sat_test_4(gr.top_block, Qt.QWidget):
     def set_offset_temp(self, offset_temp):
         self.offset_temp = offset_temp
         self.uhd_usrp_source_0_0_0.set_center_freq(self.sr1_freq+self.sr1_rit-self.offset_temp, 0)
-        self.osmosdr_source_0.set_center_freq(self.sr2_rcv_tun_freq-self.sr2_freq_offset-self.offset_temp, 0)
+        self.osmosdr_source_0.set_center_freq(self.sr2_rcv_tun_freq+self.sr2_freq_offset-self.offset_temp, 0)
 
     def get_nbfm_xlate_filter_taps_0(self):
         return self.nbfm_xlate_filter_taps_0
@@ -1220,6 +1283,9 @@ class sat_test_4(gr.top_block, Qt.QWidget):
     def set_audio_rate(self, audio_rate):
         self.audio_rate = audio_rate
         self.blocks_repeat_0.set_interpolation(int(1.2 * self.audio_rate / (self.wpm/5)))
+        self.analog_sig_source_x_0_0_1_1.set_sampling_freq(self.audio_rate)
+        self.analog_sig_source_x_0_0_1_0.set_sampling_freq(self.audio_rate)
+        self.analog_sig_source_x_0_0_1.set_sampling_freq(self.audio_rate)
 
     def get_LO(self):
         return self.LO
@@ -1233,8 +1299,14 @@ class sat_test_4(gr.top_block, Qt.QWidget):
     def set_D9600_xlate_filter_taps_0(self, D9600_xlate_filter_taps_0):
         self.D9600_xlate_filter_taps_0 = D9600_xlate_filter_taps_0
 
+    def get_BPSK(self):
+        return self.BPSK
 
-def main(top_block_cls=sat_test_4, options=None):
+    def set_BPSK(self, BPSK):
+        self.BPSK = BPSK
+
+
+def main(top_block_cls=sat_test_5, options=None):
 
     from distutils.version import StrictVersion
     if StrictVersion(Qt.qVersion()) >= StrictVersion("4.5.0"):
