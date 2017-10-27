@@ -24,7 +24,7 @@ with appropriate deletions and reformatting</value>
     </param>
     <param>
       <key>description</key>
-      <value>Ground Test 2</value>
+      <value>feedforward_test</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -48,7 +48,7 @@ with appropriate deletions and reformatting</value>
     </param>
     <param>
       <key>id</key>
-      <value>ground_test_2</value>
+      <value>feedforward_test</value>
     </param>
     <param>
       <key>max_nouts</key>
@@ -80,7 +80,7 @@ with appropriate deletions and reformatting</value>
     </param>
     <param>
       <key>title</key>
-      <value>Ground Test 2</value>
+      <value>feedforward_test</value>
     </param>
   </block>
   <block>
@@ -205,7 +205,7 @@ with appropriate deletions and reformatting</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -264,7 +264,7 @@ with appropriate deletions and reformatting</value>
     </param>
     <param>
       <key>value</key>
-      <value>-70</value>
+      <value>-10</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -354,11 +354,11 @@ with appropriate deletions and reformatting</value>
     </param>
     <param>
       <key>value</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -634,7 +634,7 @@ chan_width * num_chans = 25*7= 175</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1192,7 +1192,7 @@ EX: 3.5 GHz LO would allow 3.9 to 7.9 GHz output</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1235,11 +1235,11 @@ EX: 3.5 GHz LO would allow 3.9 to 7.9 GHz output</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1240, 1784)</value>
+      <value>(1344, 1808)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1953,7 +1953,7 @@ EX: 3.5 GHz LO would allow 3.9 to 7.9 GHz output</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2004,7 +2004,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>value</key>
-      <value>1265.e6</value>
+      <value>446.4e6</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -2282,7 +2282,7 @@ when you read an error of + 1000 Hz
     </param>
     <param>
       <key>value</key>
-      <value>0</value>
+      <value>4500</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -2318,15 +2318,15 @@ when you read an error of + 1000 Hz
     </param>
     <param>
       <key>start</key>
-      <value>-60000</value>
+      <value>-200000</value>
     </param>
     <param>
       <key>step</key>
-      <value>10</value>
+      <value>1</value>
     </param>
     <param>
       <key>stop</key>
-      <value>60000</value>
+      <value>200000</value>
     </param>
     <param>
       <key>rangeType</key>
@@ -2854,7 +2854,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2976,7 +2976,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>label0</key>
-      <value>No Test Signal</value>
+      <value>Test Signal at 1 kHz</value>
     </param>
     <param>
       <key>label1</key>
@@ -3181,7 +3181,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3303,7 +3303,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3366,7 +3366,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3429,7 +3429,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3488,7 +3488,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3582,7 +3582,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3676,7 +3676,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3798,6 +3798,53 @@ Use a telescope !</value>
     </param>
   </block>
   <block>
+    <key>analog_const_source_x</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>const</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(696, 3492)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>analog_const_source_x_1</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+  </block>
+  <block>
     <key>analog_fastnoise_source_x</key>
     <param>
       <key>amp</key>
@@ -3864,7 +3911,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>audio_pass</key>
-      <value>1400</value>
+      <value>1200</value>
     </param>
     <param>
       <key>audio_stop</key>
@@ -3896,7 +3943,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(456, 3040)</value>
+      <value>(432, 3008)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3904,7 +3951,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>gain</key>
-      <value>1000</value>
+      <value>100</value>
     </param>
     <param>
       <key>id</key>
@@ -3924,10 +3971,77 @@ Use a telescope !</value>
     </param>
   </block>
   <block>
+    <key>analog_fm_demod_cf</key>
+    <param>
+      <key>audio_decim</key>
+      <value></value>
+    </param>
+    <param>
+      <key>audio_pass</key>
+      <value>15000</value>
+    </param>
+    <param>
+      <key>audio_stop</key>
+      <value>16000</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>chan_rate</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>deviation</key>
+      <value>75000</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(168, 3016)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>gain</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>analog_fm_demod_cf_1</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>tau</key>
+      <value>75e-6</value>
+    </param>
+  </block>
+  <block>
     <key>analog_nbfm_rx</key>
     <param>
       <key>audio_rate</key>
-      <value>int(samp_rate_sr2/4/4)/2</value>
+      <value>int(samp_rate_sr2/4/4)</value>
     </param>
     <param>
       <key>alias</key>
@@ -3943,7 +4057,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3998,7 +4112,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4112,7 +4226,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4171,7 +4285,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4226,7 +4340,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4320,7 +4434,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4355,7 +4469,7 @@ Use a telescope !</value>
     <key>analog_sig_source_x</key>
     <param>
       <key>amp</key>
-      <value>0.00005</value>
+      <value>1</value>
     </param>
     <param>
       <key>alias</key>
@@ -4371,15 +4485,15 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>freq</key>
-      <value>2**16</value>
+      <value>9000</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(632, 792)</value>
+      <value>(408, 1360)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4407,11 +4521,11 @@ Use a telescope !</value>
     </param>
     <param>
       <key>samp_rate</key>
-      <value>samp_rate_sr1/4</value>
+      <value>samp_rate_sr2</value>
     </param>
     <param>
       <key>waveform</key>
-      <value>analog.GR_COS_WAVE</value>
+      <value>analog.GR_CONST_WAVE</value>
     </param>
   </block>
   <block>
@@ -4434,7 +4548,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>freq</key>
@@ -4442,7 +4556,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(744, 3408)</value>
+      <value>(680, 3424)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4690,6 +4804,69 @@ Use a telescope !</value>
     </param>
     <param>
       <key>freq</key>
+      <value>1e3</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(472, 776)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>analog_sig_source_x_1_1</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>offset</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate_sr1</value>
+    </param>
+    <param>
+      <key>waveform</key>
+      <value>analog.GR_COS_WAVE</value>
+    </param>
+  </block>
+  <block>
+    <key>analog_sig_source_x</key>
+    <param>
+      <key>amp</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>freq</key>
       <value>offset_temp</value>
     </param>
     <param>
@@ -4749,7 +4926,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>freq</key>
@@ -4859,7 +5036,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -5107,7 +5284,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -5170,7 +5347,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -5351,7 +5528,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(464, 1528)</value>
+      <value>(488, 1528)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -5398,7 +5575,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -5500,7 +5677,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -5543,7 +5720,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -5571,7 +5748,7 @@ Use a telescope !</value>
     </param>
   </block>
   <block>
-    <key>blocks_delay</key>
+    <key>blocks_complex_to_float</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -5585,16 +5762,12 @@ Use a telescope !</value>
       <value></value>
     </param>
     <param>
-      <key>delay</key>
-      <value>64*2</value>
-    </param>
-    <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(2936, 1780)</value>
+      <value>(1104, 2624)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -5602,7 +5775,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>id</key>
-      <value>blocks_delay_0</value>
+      <value>blocks_complex_to_float_2</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -5611,14 +5784,6 @@ Use a telescope !</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
-    </param>
-    <param>
-      <key>num_ports</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>float</value>
     </param>
     <param>
       <key>vlen</key>
@@ -5731,7 +5896,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -5801,7 +5966,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>const</key>
-      <value>0.1</value>
+      <value>1</value>
     </param>
     <param>
       <key>affinity</key>
@@ -5911,7 +6076,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -5966,7 +6131,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(792, 1572)</value>
+      <value>(1304, 1540)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -6013,7 +6178,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -6115,7 +6280,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -6268,7 +6433,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -6319,7 +6484,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -6332,57 +6497,6 @@ Use a telescope !</value>
     <param>
       <key>id</key>
       <value>blocks_multiply_const_vxx_5</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_multiply_const_vxx</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>const</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(888, 1044)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_multiply_const_vxx_6</value>
     </param>
     <param>
       <key>type</key>
@@ -6468,7 +6582,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -6574,7 +6688,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(576, 1544)</value>
+      <value>(640, 1368)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -6723,7 +6837,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -6782,7 +6896,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(3104, 1712)</value>
+      <value>(1384, 648)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -6794,7 +6908,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>type</key>
-      <value>float</value>
+      <value>complex</value>
     </param>
     <param>
       <key>num_inputs</key>
@@ -6872,7 +6986,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -6974,11 +7088,11 @@ Use a telescope !</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(2808, 2016)</value>
+      <value>(2848, 1968)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -7042,6 +7156,61 @@ Use a telescope !</value>
     <param>
       <key>id</key>
       <value>blocks_null_source_1</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>num_outputs</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_null_source</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bus_conns</key>
+      <value>[[0,],]</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(352, 416)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_null_source_2</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -7319,7 +7488,7 @@ Use a telescope !</value>
     <key>blocks_vco_c</key>
     <param>
       <key>amplitude</key>
-      <value>.05</value>
+      <value>1</value>
     </param>
     <param>
       <key>alias</key>
@@ -7359,7 +7528,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>samp_rate</key>
-      <value>samp_rate_sr1/4</value>
+      <value>samp_rate_sr1</value>
     </param>
     <param>
       <key>sensitivity</key>
@@ -7414,7 +7583,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>sensitivity</key>
-      <value>-(22/7)*(502./3)*1.25*2*1.52*1.6*1.6*pseudo_doppler</value>
+      <value>-(22/7)*(502./3)*1.25*2*1.52*1.6*3*1.6</value>
     </param>
   </block>
   <block>
@@ -7429,11 +7598,7 @@ Use a telescope !</value>
     </param>
     <param>
       <key>comment</key>
-      <value>The weighting of the frequency is done because
-the incoming X-Band Doppler is a higher 
-frequency than the transmit frequency.
-
-For 5 and dime the ratio is about 1/2.</value>
+      <value></value>
     </param>
     <param>
       <key>affinity</key>
@@ -7441,7 +7606,7 @@ For 5 and dime the ratio is about 1/2.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -7539,7 +7704,7 @@ For 5 and dime the ratio is about 1/2.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -7555,7 +7720,7 @@ For 5 and dime the ratio is about 1/2.</value>
     </param>
     <param>
       <key>length</key>
-      <value>128</value>
+      <value>4</value>
     </param>
     <param>
       <key>long_form</key>
@@ -7598,7 +7763,7 @@ For 5 and dime the ratio is about 1/2.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -7606,7 +7771,7 @@ For 5 and dime the ratio is about 1/2.</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value>6,3,1,1</value>
+      <value></value>
     </param>
     <param>
       <key>_rotation</key>
@@ -7902,7 +8067,7 @@ with the number of taps.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -7968,7 +8133,7 @@ with the number of taps.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -8216,7 +8381,7 @@ with the number of taps.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>2</value>
+      <value>0</value>
     </param>
     <param>
       <key>type</key>
@@ -8291,7 +8456,7 @@ with the number of taps.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>type</key>
@@ -8549,7 +8714,7 @@ with the number of taps.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -8611,7 +8776,7 @@ with the number of taps.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -8642,7 +8807,7 @@ with the number of taps.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -8673,7 +8838,7 @@ with the number of taps.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -8708,7 +8873,7 @@ with the number of taps.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(464, 1316)</value>
+      <value>(400, 1316)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -8720,7 +8885,7 @@ with the number of taps.</value>
     </param>
     <param>
       <key>note</key>
-      <value>test rack input</value>
+      <value>temp offset for DC and I/Q imbalance</value>
     </param>
   </block>
   <block>
@@ -8797,11 +8962,11 @@ with the number of taps.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(2576, 636)</value>
+      <value>(2624, 604)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -8828,7 +8993,7 @@ with the number of taps.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -8890,7 +9055,7 @@ with the number of taps.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -8983,7 +9148,7 @@ with the number of taps.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -9014,7 +9179,7 @@ with the number of taps.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -9080,69 +9245,7 @@ with the number of taps.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(2904, 1720)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>note_24</value>
-    </param>
-    <param>
-      <key>note</key>
-      <value>Fi/Fo Delay to reduce rate issues</value>
-    </param>
-  </block>
-  <block>
-    <key>note</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(3040, 900)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>note_25</value>
-    </param>
-    <param>
-      <key>note</key>
-      <value>No uplink offset appllied for Demo</value>
-    </param>
-  </block>
-  <block>
-    <key>note</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(600, 2604)</value>
+      <value>(616, 2604)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -9173,7 +9276,7 @@ with the number of taps.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(584, 3188)</value>
+      <value>(400, 3148)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -9399,7 +9502,7 @@ PsDIn-sr2= PSDout*(sr2_freq/st1_freq)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -9434,7 +9537,7 @@ PsDIn-sr2= PSDout*(sr2_freq/st1_freq)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(508, 1888)</value>
+      <value>(564, 1880)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -9554,7 +9657,7 @@ PsDIn-sr2= PSDout*(sr2_freq/st1_freq)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -11114,7 +11217,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>freq</key>
-      <value>(4.5/4200.)</value>
+      <value>4.2/4000</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -11210,7 +11313,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>samp_rate</key>
-      <value>samp_rate_sr2/4</value>
+      <value>samp_rate_sr2</value>
     </param>
     <param>
       <key>waveform</key>
@@ -11257,7 +11360,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>fftsize</key>
@@ -11560,15 +11663,15 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>fftsize</key>
-      <value>1024</value>
+      <value>1024*8*2-1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(784, 1296)</value>
+      <value>(992, 1400)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value>1,1,1,2</value>
+      <value>1,1,1,3</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -11584,7 +11687,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>legend</key>
-      <value>False</value>
+      <value>True</value>
     </param>
     <param>
       <key>alpha1</key>
@@ -11596,7 +11699,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>label1</key>
-      <value></value>
+      <value>After 1kHz tone + input w/ pseudo Dopp</value>
     </param>
     <param>
       <key>width1</key>
@@ -11628,7 +11731,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>label2</key>
-      <value></value>
+      <value>Pseudo Doppler</value>
     </param>
     <param>
       <key>width2</key>
@@ -11644,11 +11747,11 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>label3</key>
-      <value></value>
+      <value>Corrected Input (after subtraction)</value>
     </param>
     <param>
       <key>width3</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>alpha4</key>
@@ -11660,7 +11763,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>label4</key>
-      <value></value>
+      <value>Doppler Detected</value>
     </param>
     <param>
       <key>width4</key>
@@ -11672,11 +11775,11 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>color5</key>
-      <value>"cyan"</value>
+      <value>"magenta"</value>
     </param>
     <param>
       <key>label5</key>
-      <value></value>
+      <value>Tone input</value>
     </param>
     <param>
       <key>width5</key>
@@ -11756,11 +11859,11 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>name</key>
-      <value>"GR2 (LNB) Output"</value>
+      <value>"GR2 (LNB) Input"</value>
     </param>
     <param>
       <key>nconnections</key>
-      <value>1</value>
+      <value>5</value>
     </param>
     <param>
       <key>showports</key>
@@ -11843,11 +11946,11 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>was 1,3,1,1</value>
     </param>
     <param>
       <key>ctrlpanel</key>
-      <value>False</value>
+      <value>True</value>
     </param>
     <param>
       <key>affinity</key>
@@ -11863,11 +11966,11 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1240, 1336)</value>
+      <value>(1544, 1264)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value>1,3,1,1</value>
+      <value>3,1,1,2</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -11883,7 +11986,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>legend</key>
-      <value>False</value>
+      <value>True</value>
     </param>
     <param>
       <key>alpha1</key>
@@ -12107,7 +12210,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>ymin</key>
-      <value>-100</value>
+      <value>-150</value>
     </param>
     <param>
       <key>units</key>
@@ -12130,7 +12233,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>bw</key>
-      <value>samp_rate_sr2/4/10</value>
+      <value>samp_rate_sr2/4/8</value>
     </param>
     <param>
       <key>alias</key>
@@ -12146,7 +12249,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>ctrlpanel</key>
-      <value>False</value>
+      <value>True</value>
     </param>
     <param>
       <key>affinity</key>
@@ -12162,11 +12265,11 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1480, 1644)</value>
+      <value>(1648, 2712)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value>7,3,1,1</value>
+      <value></value>
     </param>
     <param>
       <key>_rotation</key>
@@ -12174,7 +12277,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>grid</key>
-      <value>False</value>
+      <value>True</value>
     </param>
     <param>
       <key>id</key>
@@ -12194,7 +12297,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>label1</key>
-      <value></value>
+      <value>From FM demod</value>
     </param>
     <param>
       <key>width1</key>
@@ -12226,7 +12329,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>label2</key>
-      <value></value>
+      <value>S/H out</value>
     </param>
     <param>
       <key>width2</key>
@@ -12242,7 +12345,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>label3</key>
-      <value></value>
+      <value>VCO out- REAL</value>
     </param>
     <param>
       <key>width3</key>
@@ -12354,11 +12457,11 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>name</key>
-      <value>"nbfm sat rcvd"</value>
+      <value>""</value>
     </param>
     <param>
       <key>nconnections</key>
-      <value>1</value>
+      <value>3</value>
     </param>
     <param>
       <key>showports</key>
@@ -12386,7 +12489,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>type</key>
-      <value>complex</value>
+      <value>float</value>
     </param>
     <param>
       <key>update_time</key>
@@ -12728,7 +12831,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>bw</key>
-      <value>samp_rate_sr1/4/4</value>
+      <value>samp_rate_sr1/4/4/2</value>
     </param>
     <param>
       <key>alias</key>
@@ -12752,7 +12855,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>fftsize</key>
@@ -12760,11 +12863,11 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1736, 1656)</value>
+      <value>(1680, 1744)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value>8,3,1,1</value>
+      <value>7,3,1,1</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -12796,7 +12899,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>width1</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>alpha10</key>
@@ -12952,11 +13055,11 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>name</key>
-      <value>"LNB audio nbfm"</value>
+      <value>"LNB RF nbfm"</value>
     </param>
     <param>
       <key>nconnections</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>showports</key>
@@ -13330,7 +13433,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>was 3,3,1,1</value>
     </param>
     <param>
       <key>affinity</key>
@@ -13338,7 +13441,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>True</value>
     </param>
     <param>
       <key>fftsize</key>
@@ -13346,7 +13449,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1368, 1520)</value>
+      <value>(1688, 1440)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -13370,11 +13473,11 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>name</key>
-      <value>"3,3,1,1"</value>
+      <value>"Doppler Correction"</value>
     </param>
     <param>
       <key>plotconst</key>
-      <value>True</value>
+      <value>False</value>
     </param>
     <param>
       <key>plotfreq</key>
@@ -13445,7 +13548,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(824, 1224)</value>
+      <value>(728, 1240)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -13536,15 +13639,15 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>fftsize</key>
-      <value>1024*2*2</value>
+      <value>1024</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1200, 1616)</value>
+      <value>(1504, 1480)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -13564,11 +13667,11 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>int_max</key>
-      <value>-10</value>
+      <value>0</value>
     </param>
     <param>
       <key>int_min</key>
-      <value>-50</value>
+      <value>-120</value>
     </param>
     <param>
       <key>legend</key>
@@ -13767,7 +13870,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1104, 1424)</value>
+      <value>(1552, 1352)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -13970,11 +14073,11 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>decim</key>
-      <value>int(samp_rate_sr2/4/4)/2</value>
+      <value>int(samp_rate_sr2/4/4)</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>fbw</key>
@@ -14033,7 +14136,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>fbw</key>
@@ -14092,7 +14195,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>fbw</key>
@@ -14210,7 +14313,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>fbw</key>
@@ -14269,7 +14372,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>fbw</key>
@@ -14328,7 +14431,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>2</value>
     </param>
     <param>
       <key>fbw</key>
@@ -14336,7 +14439,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1104, 3296)</value>
+      <value>(600, 3248)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -14395,7 +14498,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(896, 1368)</value>
+      <value>(1312, 1264)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -14454,7 +14557,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(896, 1464)</value>
+      <value>(1272, 1392)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -14505,7 +14608,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>fbw</key>
@@ -14572,7 +14675,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(656, 1464)</value>
+      <value>(696, 1536)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -14631,7 +14734,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(784, 1664)</value>
+      <value>(1256, 1648)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -14690,7 +14793,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(552, 1080)</value>
+      <value>(1040, 2472)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -14741,7 +14844,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>fbw</key>
@@ -14796,7 +14899,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>decim</key>
-      <value>int(samp_rate_sr2/4)/4</value>
+      <value>int(samp_rate_sr2/4)</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -14808,7 +14911,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1480, 1752)</value>
+      <value>(904, 2616)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -14820,7 +14923,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>interp</key>
-      <value>int(samp_rate_sr2/4/10)</value>
+      <value>int(samp_rate_sr2/32)</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -15319,7 +15422,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>freq</key>
@@ -15359,7 +15462,7 @@ w/1e6..max number is about 4295</value>
     </param>
     <param>
       <key>waveform</key>
-      <value>analog.GR_CONST_WAVE</value>
+      <value>analog.GR_COS_WAVE</value>
     </param>
   </block>
   <block>
@@ -16167,7 +16270,7 @@ WiFi type Reference for Interference
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -18891,7 +18994,7 @@ WiFi type Reference for Interference
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -19117,6 +19220,12 @@ WiFi type Reference for Interference
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>analog_const_source_x_1</source_block_id>
+    <sink_block_id>blks2_selector_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>analog_fastnoise_source_x_1</source_block_id>
     <sink_block_id>blocks_multiply_const_vxx_0</sink_block_id>
     <source_key>0</source_key>
@@ -19129,8 +19238,20 @@ WiFi type Reference for Interference
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>analog_fm_demod_cf_0</source_block_id>
+    <sink_block_id>qtgui_freq_sink_x_2</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>analog_nbfm_rx_2</source_block_id>
     <sink_block_id>dc_blocker_xx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>analog_nbfm_rx_2</source_block_id>
+    <sink_block_id>qtgui_freq_sink_x_3_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -19171,12 +19292,6 @@ WiFi type Reference for Interference
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>analog_pwr_squelch_xx_0_0_1</source_block_id>
-    <sink_block_id>rational_resampler_xxx_7</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
     <source_block_id>analog_rail_ff_0</source_block_id>
     <sink_block_id>blocks_float_to_complex_1</sink_block_id>
     <source_key>0</source_key>
@@ -19193,12 +19308,6 @@ WiFi type Reference for Interference
     <sink_block_id>blocks_float_to_complex_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>1</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>analog_sig_source_x_0</source_block_id>
-    <sink_block_id>blks2_selector_1</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>analog_sig_source_x_0_0</source_block_id>
@@ -19223,6 +19332,12 @@ WiFi type Reference for Interference
     <sink_block_id>blocks_add_xx_4</sink_block_id>
     <source_key>0</source_key>
     <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>analog_sig_source_x_1_1</source_block_id>
+    <sink_block_id>blks2_selector_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>analog_sig_source_x_1_1_0</source_block_id>
@@ -19268,7 +19383,13 @@ WiFi type Reference for Interference
   </connection>
   <connection>
     <source_block_id>blks2_selector_0_2</source_block_id>
-    <sink_block_id>blocks_delay_0</sink_block_id>
+    <sink_block_id>blocks_multiply_const_vxx_0_0_2</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blks2_selector_1</source_block_id>
+    <sink_block_id>blocks_add_xx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -19280,9 +19401,9 @@ WiFi type Reference for Interference
   </connection>
   <connection>
     <source_block_id>blks2_selector_1</source_block_id>
-    <sink_block_id>rational_resampler_xxx_5</sink_block_id>
+    <sink_block_id>qtgui_freq_sink_x_0_0</sink_block_id>
     <source_key>0</source_key>
-    <sink_key>0</sink_key>
+    <sink_key>4</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_add_xx_0</source_block_id>
@@ -19333,10 +19454,10 @@ WiFi type Reference for Interference
     <sink_key>3</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_delay_0</source_block_id>
-    <sink_block_id>blocks_multiply_const_vxx_0_0_2</sink_block_id>
+    <source_block_id>blocks_complex_to_float_2</source_block_id>
+    <sink_block_id>qtgui_freq_sink_x_2</sink_block_id>
     <source_key>0</source_key>
-    <sink_key>0</sink_key>
+    <sink_key>2</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_float_to_char_0</source_block_id>
@@ -19370,7 +19491,13 @@ WiFi type Reference for Interference
   </connection>
   <connection>
     <source_block_id>blocks_multiply_const_vxx_0_0_2</source_block_id>
-    <sink_block_id>blocks_null_sink_0</sink_block_id>
+    <sink_block_id>blocks_probe_rate_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_multiply_const_vxx_1</source_block_id>
+    <sink_block_id>qtgui_waterfall_sink_x_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -19389,6 +19516,12 @@ WiFi type Reference for Interference
   <connection>
     <source_block_id>blocks_multiply_const_vxx_1_1</source_block_id>
     <sink_block_id>freq_error_det_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_multiply_const_vxx_2</source_block_id>
+    <sink_block_id>blocks_null_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -19437,6 +19570,12 @@ WiFi type Reference for Interference
   <connection>
     <source_block_id>blocks_multiply_xx_0</source_block_id>
     <sink_block_id>blocks_multiply_const_vxx_2</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_multiply_xx_0</source_block_id>
+    <sink_block_id>blocks_null_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -19525,6 +19664,12 @@ WiFi type Reference for Interference
     <sink_key>1</sink_key>
   </connection>
   <connection>
+    <source_block_id>blocks_null_source_2</source_block_id>
+    <sink_block_id>blocks_add_xx_4</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>blocks_probe_rate_0</source_block_id>
     <sink_block_id>blocks_message_debug_0</sink_block_id>
     <source_key>rate</source_key>
@@ -19541,6 +19686,12 @@ WiFi type Reference for Interference
     <sink_block_id>freq_error_det</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_sample_and_hold_xx_0</source_block_id>
+    <sink_block_id>qtgui_freq_sink_x_2</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_vco_c_0</source_block_id>
@@ -19573,6 +19724,18 @@ WiFi type Reference for Interference
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>blocks_vco_c_0_2_0</source_block_id>
+    <sink_block_id>rational_resampler_xxx_5</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_vco_c_0_2_0</source_block_id>
+    <sink_block_id>rational_resampler_xxx_7</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>blocks_vco_c_0_2_0_0</source_block_id>
     <sink_block_id>rational_resampler_xxx_0_1_0</sink_block_id>
     <source_key>0</source_key>
@@ -19586,15 +19749,9 @@ WiFi type Reference for Interference
   </connection>
   <connection>
     <source_block_id>dc_blocker_xx_0</source_block_id>
-    <sink_block_id>blocks_probe_rate_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>dc_blocker_xx_0</source_block_id>
     <sink_block_id>qtgui_freq_sink_x_3_1</sink_block_id>
     <source_key>0</source_key>
-    <sink_key>0</sink_key>
+    <sink_key>1</sink_key>
   </connection>
   <connection>
     <source_block_id>dc_blocker_xx_0</source_block_id>
@@ -19711,6 +19868,12 @@ WiFi type Reference for Interference
     <sink_key>1</sink_key>
   </connection>
   <connection>
+    <source_block_id>rational_resampler_xxx_2</source_block_id>
+    <sink_block_id>qtgui_freq_sink_x_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
     <source_block_id>rational_resampler_xxx_3</source_block_id>
     <sink_block_id>qtgui_freq_sink_x_1</sink_block_id>
     <source_key>0</source_key>
@@ -19760,21 +19923,21 @@ WiFi type Reference for Interference
   </connection>
   <connection>
     <source_block_id>rational_resampler_xxx_4_0_0</source_block_id>
+    <sink_block_id>qtgui_freq_sink_x_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>2</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>rational_resampler_xxx_4_0_0</source_block_id>
     <sink_block_id>qtgui_sink_x_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>rational_resampler_xxx_4_0_0</source_block_id>
-    <sink_block_id>qtgui_waterfall_sink_x_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
     <source_block_id>rational_resampler_xxx_5</source_block_id>
-    <sink_block_id>blocks_add_xx_0</sink_block_id>
+    <sink_block_id>qtgui_freq_sink_x_0_0</sink_block_id>
     <source_key>0</source_key>
-    <sink_key>0</sink_key>
+    <sink_key>3</sink_key>
   </connection>
   <connection>
     <source_block_id>rational_resampler_xxx_6</source_block_id>
@@ -19790,7 +19953,7 @@ WiFi type Reference for Interference
   </connection>
   <connection>
     <source_block_id>rational_resampler_xxx_7</source_block_id>
-    <sink_block_id>qtgui_freq_sink_x_2</sink_block_id>
+    <sink_block_id>blocks_complex_to_float_2</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
